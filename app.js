@@ -1,6 +1,9 @@
+//CICD PARA UN HOSTING EN LA PÁGINA WEB 
+//HEROKU CREAR CUENTA EN ELLA, deploguear esta pagina. 
 const express = require('express');
 const path = require('path');
 const color = require('colors');
+const port = process.env.PORT || 3030;
 
 const app = express();
 
@@ -46,4 +49,4 @@ app.get('/turing', (req, res) => {
     res.sendFile(pathFile);
 });
 
-app.listen(3030, () => console.log('Servidor el puerto 3030'.bold.magenta));
+app.listen(port, () => console.log('Servidor el puerto 3030'.bold.magenta));
